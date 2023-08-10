@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego - Curso Práctico de Animaciones con CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="page">
+
+        <section class="container">
+            <nav class="navbar">
+                <div class="navbar__content">
+                    <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="Logo">
+                    <ul>
+                        <li><a href="/">EXCLUSIVOS</a></li>
+                        <li><a href="/">NUEVOS</a></li>
+                        <li><a href="/">GIFT CARDS</a></li>
+                        <li><a href="/">FIND A STORE</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="main-content">
+                <p>Diseña tu</p>
+                <h1>Súper Héroe!</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book</p>
+            </section>
+            <aside class="side-content">
+                <p>Superman</p>
+                <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="Mocha">
+                <div></div>
+            </aside>
+            <footer class="footer">
+                <div id="btnSpiderman">
+                    <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman">
+                </div>
+                <div id="btnRobin">
+                    <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin">
+                </div>
+                <div id="btnBatman">
+                    <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman">
+                </div>
+            </footer>
+        </section>
+
+        <section class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <section class="modal hidden">
+            <div class="modal-content">
+                <img class="modal-content__close" src="https://img.icons8.com/windows/32/000000/macos-close.png"
+                    alt="ícono de cerrar" />
+                <div class="modal-content__slider">
+                    <input type="radio" name="slider-1" id="radio-1" checked>
+                    <input type="radio" name="slider-1" id="radio-2">
+                    <input type="radio" name="slider-1" id="radio-3">
+                    <div class="cards">
+                        <label for="radio-1" id="card-1" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man_db8af43d-b692-4986-a385-e645d286e142.png"
+                                alt="spiderman" />
+                        </label>
+                        <label for="radio-2" id="card-2" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man-2_b24c96b3-6d59-496f-815d-32b25eba0141.png"
+                                alt="spiderman" />
+                        </label>
+                        <label for="radio-3" id="card-3" class="card">
+                            <img src="https://static.platzi.com/media/public/uploads/spider-man-3_19f5c510-8059-4477-abf8-42249a5445b7.png"
+                                alt="spiderman" />
+                        </label>
+                    </div>
+                </div>
+                <button class="modal-content__button">Lo quiero!</button>
+        </section>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal");
+        const btnSpiderman = document.querySelector("#btnSpiderman");
+        const btnRobin = document.querySelector("#btnRobin");
+        const btnBatman = document.querySelector("#btnBatman");
+        const btnCerrar = document.querySelector(".modal-content__close");
+
+        btnSpiderman.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("visible");
+        });
+
+        btnRobin.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("visible");
+        });
+
+        btnBatman.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("visible");
+        });
+
+        btnCerrar.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("visible");
+        });
+    </script>
+</body>
+
+</html>
